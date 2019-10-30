@@ -1,0 +1,152 @@
+body {
+  background: linear-gradient(rgb(49, 102, 113), rgba(119, 169, 151, 0)),
+    linear-gradient(rgba(119, 169, 151, 0), rgb(53, 111, 123)),
+    radial-gradient(rgb(92, 107, 101), rgb(33, 111, 191));
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  color: #d0c6aa;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  margin-top: 100px;
+  padding-bottom: 200px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 3em;
+  margin-bottom: 100px;
+}
+
+h1,
+.success {
+  font-family: Lora;
+  font-family: "Playfair Display";
+}
+
+label {
+  cursor: pointer;
+}
+
+.question-wrapper {
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  display: flex;
+}
+
+.question-wrapper .text-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.answers {
+  margin: 0;
+  padding: 0.4em 0;
+  list-style: none;
+  flex: 1 1;
+}
+
+.answers li {
+  padding: 1em 1.2em;
+  font-size: 14px;
+}
+
+.answers li:not(:last-child) {
+  padding-bottom: 0;
+}
+
+.question {
+  margin: 0;
+  margin-bottom: 1px;
+  padding: 1em 1.2em;
+}
+
+.question,
+.answers {
+  background-color: hsla(0, 0%, 0%, 0.5);
+  transition: 1s;
+}
+
+.question-wrapper:hover .question,
+.question-wrapper:hover .answers {
+  background-color: hsla(0, 0%, 0%, 0.8);
+}
+
+.question-text-left,
+.question-text-right,
+.question-text-left .text-section,
+.question-text-right .text-section {
+  height: 250px;
+}
+
+.sound-cloudquestion iframe {
+  min-width: 250px;
+}
+
+.question-text-right .text-section {
+  margin-left: 1px;
+}
+
+.question-text-bottom {
+  flex-direction: column;
+}
+
+.image-question.question-text-bottom img {
+  width: 800px;
+  height: auto;
+}
+
+.question-text-bottom .text-section {
+  margin-top: 1px;
+}
+
+.question-text-left {
+  flex-direction: row-reverse;
+}
+
+.question-text-left img {
+  width: 250px;
+  height: auto;
+}
+
+.question-text-left .text-section {
+  flex: 1 1;
+  margin-right: 1px;
+}
+
+#restart,
+#done {
+  display: block;
+  background: #a59874;
+  border: none;
+  color: #271d05;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  font-family: "Playfair Display";
+  font-size: 24px;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  transition: 1s;
+}
+
+#done:hover,
+#restart:hover {
+  background: #d8c593;
+}
+
+.result {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  width: 415px;
+}
+
+.result.success {
+  font-size: 100px;
+  text-align: center;
+}

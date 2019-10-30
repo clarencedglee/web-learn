@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>A Little Music Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/style.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora|Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <h1>A&nbsp;Little Music&nbsp;Quiz</h1>
+
+    <div class="question-wrapper image-question question-text-left">
+      <img src="images/cello.jpg" />
+      <div class="text-section">
+        <p class="question">
+          How long is a piece of string? (On a cello that is...)
+        </p>
+        <ul class="answers">
+          <li>
+            <label>
+              <input type="radio" name="answer_3" value="70cm" />
+              70cm
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer_3" value="70km" />
+              70km
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer_3" value="80cm" />
+              80cm
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="question-wrapper image-question question-text-bottom">
+      <img src="images/score.png" />
+      <div class="text-section">
+        <p class="question">
+          Whose scribbles are these?
+        </p>
+        <ul class="answers">
+          <li>
+            <label>
+              <input type="radio" name="answer_2" value="Hans Zimmer" />
+              Hans Zimmer
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer_2" value="Hans Richter" />
+              Hans Richter
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer_2" value="Bedrich Smatana" />
+              Bedrich Smatana
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="question-wrapper soundcloud-question question-text-right">
+      <iframe
+        width="250"
+        height="250"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/83459099&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      ></iframe>
+      <div class="text-section">
+        <p class="question">
+          How long did Claude old boy procrastinate over Arabesque?
+        </p>
+        <ul class="answers">
+          <li>
+            <label>
+              <input type="radio" name="answer_1" value="2" />
+              2 years
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer_1" value="3" />
+              3 years
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="answer_1" value="40" />
+              40 years
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button id="done">Done</button>
+
+    <div class="result success" style="display: none;">Correct!</div>
+
+    <div class="result error" style="display: none;">
+      <p>Nope!</p>
+      <p>The correct answers are:</p>
+      <p>70cm for the cello string</p>
+      <p></p>
+      <p>Bedrich Smetana scribbled that tune</p>
+      <p></p>
+      <p>3 years, between 1888 and 1891</p>
+      <p></p>
+    </div>
+
+    <button id="restart" style="display: none;">Restart</button>
+  </body>
+</html>
