@@ -1,7 +1,10 @@
 $(() => {
+  $("body").addClass("f");
+
   $("#start").click(function() {
     $(".screen.intro").removeClass("show");
     $(".screen.one").addClass("show");
+    $("body").removeClass("f");
   });
 
   $(".screen.one input").click(function() {
@@ -43,4 +46,5 @@ function restart() {
   $(".screen").removeClass("show");
   $(".screen.intro").addClass("show");
   $("input").prop("checked", false);
+  $("body").addClass("f");
 }
