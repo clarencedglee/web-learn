@@ -1,36 +1,46 @@
 $(() => {
-  const correctAnswers = "70cm+Bedrich Smatana+3";
-
-  $("#done").click(function() {
-    const answers = $("input:checked")
-      .get()
-      .map(checkbox => checkbox.value)
-      .join("+");
-
-    if (answers === correctAnswers) {
-      showSuccess();
-    } else {
-      showError();
-    }
+  $("#start").click(function() {
+    $(".screen.intro").removeClass("show");
+    $(".screen.one").addClass("show");
   });
 
-  $("#restart").click(function() {
+  $(".screen.one input").click(function() {
+    $(".screen.one").removeClass("show");
+    $(".screen.two").addClass("show");
+  });
+
+  $(".screen.two input").click(function() {
+    $(".screen.two").removeClass("show");
+    $(".screen.three").addClass("show");
+  });
+
+  $(".screen.three input").click(function() {
+    $(".screen.three").removeClass("show");
+    showResults();
+  });
+
+  $(".restart").click(function() {
     restart();
   });
 });
 
-function showSuccess() {
-  $(".question-wrapper, #done").hide();
-  $(".success, #restart").show();
-}
+const correctAnswers = "70cm+Bedrich Smatana+3";
 
-function showError() {
-  $(".question-wrapper, #done").hide();
-  $(".error, #restart").show();
+function showResults() {
+  const answers = $("input:checked")
+    .get()
+    .map(checkbox => checkbox.value)
+    .join("+");
+
+  if (answers === correctAnswers) {
+    $(".screen.success").addClass("show");
+  } else {
+    $(".screen.error").addClass("show");
+  }
 }
 
 function restart() {
-  $(".question-wrapper, #done").show();
-  $(".error, .success, #restart").hide();
+  $(".screen").removeClass("show");
+  $(".screen.intro").addClass("show");
   $("input").prop("checked", false);
 }

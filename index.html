@@ -15,17 +15,21 @@
       href="css/style.css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Lora|Playfair+Display&display=swap"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed:300|Roboto:300&display=swap"
       rel="stylesheet"
     />
+
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/script.js"></script>
   </head>
 
   <body>
-    <h1>A&nbsp;Little Music&nbsp;Quiz</h1>
+    <div class="screen intro show">
+      <h1>A&nbsp;Little Music&nbsp;Quiz</h1>
+      <button id="start">Start</button>
+    </div>
 
-    <div class="question-wrapper image-question question-text-left">
+    <div class="screen one question-wrapper image-question question-text-left">
       <img src="images/cello.jpg" />
       <div class="text-section">
         <p class="question">
@@ -54,7 +58,9 @@
       </div>
     </div>
 
-    <div class="question-wrapper image-question question-text-bottom">
+    <div
+      class="screen two question-wrapper image-question question-text-bottom"
+    >
       <img src="images/score.png" />
       <div class="text-section">
         <p class="question">
@@ -83,7 +89,9 @@
       </div>
     </div>
 
-    <div class="question-wrapper soundcloud-question question-text-right">
+    <div
+      class="screen three question-wrapper soundcloud-question question-text-right"
+    >
       <iframe
         width="100%"
         height="250"
@@ -119,21 +127,18 @@
       </div>
     </div>
 
-    <button id="done">Done</button>
-
-    <div class="result success" style="display: none;">Correct!</div>
-
-    <div class="result error" style="display: none;">
-      <p>Nope!</p>
-      <p>The correct answers are:</p>
-      <p>70cm for the cello string</p>
-      <p></p>
-      <p>Bedrich Smetana scribbled that tune</p>
-      <p></p>
-      <p>3 years, between 1888 and 1891</p>
-      <p></p>
+    <div class="screen result success">
+      <h2>Correct!</h2>
+      <button class="restart">Restart</button>
     </div>
 
-    <button id="restart" style="display: none;">Restart</button>
+    <div class="screen result error">
+      <h2>Nope!</h2>
+      <p>The correct answers are:</p>
+      <p>70cm for the cello string</p>
+      <p>Bedrich Smetana scribbled that tune</p>
+      <p>3 years, between 1888 and 1891</p>
+      <button class="restart">Restart</button>
+    </div>
   </body>
 </html>
