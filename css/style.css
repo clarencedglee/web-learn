@@ -2,6 +2,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-size: 100vw 100vh;
   background-image: linear-gradient(rgb(49, 102, 113), rgb(78, 138, 129));
+  background-position: center;
   color: #d0c6aa;
   font-family: Roboto, "Times New Roman", Times, serif;
   font-size: 18px;
